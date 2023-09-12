@@ -1,0 +1,66 @@
+.HeroStyles {
+  padding: 130px 30px;
+}
+
+.HeroStyles h2 {
+  font-size: 60px;
+  width: 35%;
+  color: white;
+}
+
+.HeroStyles .describep {
+  color: white;
+  font-size: 16px;
+  width: 40%;
+  line-height: 35px;
+  text-align: left;
+}
+
+.ratings {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin: 25px 0px;
+}
+.imdbimg {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.imdbimg p {
+  color: #e4dede;
+  font-size: 14px;
+}
+
+.ratep {
+  padding-right: 30px;
+  padding-left: 8px;
+}
+
+.rateptwo {
+  padding-left: 10px;
+  padding-right: 30px;
+}
+
+.herobtn {
+  background-color: #be123c;
+  color: #e4dede;
+  padding: 18px 40px;
+  border: #be123c 1px solid;
+  border-radius: 6px;
+  margin: 30px 0px;
+  cursor: pointer;
+}
+
+.imgtexts {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 600;
+}
+
+.imgtexts img {
+  padding-right: 13px;
+  width: 40px;
+}

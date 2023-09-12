@@ -1,0 +1,25 @@
+/* SearchInput.css */
+
+.searchContainer {
+  position: relative;
+  width: 450px; /* Adjust the width as needed */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  padding: 8px;
+  background-color: transparent;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.searchIcon {
+  position: absolute;
+  right: 10px; /* Adjust the right offset as needed */
+  cursor: pointer; /* Add a pointer cursor to indicate it's clickable */
+}

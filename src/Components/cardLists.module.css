@@ -1,0 +1,38 @@
+.movieList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.ListCard {
+  padding: 30px 70px;
+}
+
+.seendicon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.featuretxts {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin: 30px 0px;
+}
+
+.seendicon {
+  cursor: pointer;
+}
+
+.seendicon img {
+  height: 17px;
+  width: auto;
+  padding-left: 10px;
+}
+
+.seendicon a {
+  color: #be123c;
+}

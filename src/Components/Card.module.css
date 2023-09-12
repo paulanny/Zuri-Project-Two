@@ -1,0 +1,36 @@
+.imdbim {
+  display: flex;
+  flex-direction: row;
+}
+
+.rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.imdbim img {
+  margin-right: 13px;
+}
+
+.imdbim p {
+  font-size: 10px;
+  font-weight: 400;
+  color: rgba(17, 24, 39, 1);
+}
+
+.movieReleaseDate {
+  font-size: 10px;
+  color:  rgba(156, 163, 175, 1);
+  margin: 6px 0px 10px 0px;
+  font-weight: 700;
+}
+
+.movieTitle {  
+  color: (17, 24, 39, 1);
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;;
+}

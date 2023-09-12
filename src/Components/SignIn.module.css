@@ -1,0 +1,11 @@
+.SignIn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.SignIn p {
+  color: white;
+  margin-right: 13px;
+}
