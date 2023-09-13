@@ -1,4 +1,4 @@
-import HeroImg from '../Assets/Poster.png';
+// import HeroImg from '../Assets/Poster.png';
 import classes from './HeroStyles.module.css';
 import Imdb from '../Assets/imdb.png';
 import Tomatoes from '../Assets/tomato.png';

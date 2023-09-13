@@ -44,27 +44,10 @@ const CardLists = () => {
       });
   }, []);
 
-  const genreMapping = {
-    28: "Action",
-    12: "Adventure",
-    16: "Animation",
-    35: "Comedy",
-    80: "Crime",
-    99: "Documentary",
-    14: "Fantasy",
-    10751: "Family",
-    36: "History",
-    10402: "Music",
-    9648: "Mystery",
-    10749: "Romance",
-    878: "Science Fiction",
-    10770: "TV Movie",
-    53: "Thriller",
-    10752: "War",
-    37: "Western",
+  if (movies.length === 0) {
+    return <p>No movies found.</p>;
   }
   
-const genreNames = movie.genre_ids.map((genreId) => genreMapping[genreId]);
 
   // const movies = [
   //   {
@@ -90,7 +73,7 @@ const genreNames = movie.genre_ids.map((genreId) => genreMapping[genreId]);
   //     posterUrl: Poster,
   //   },
   // ];
-  const top10Movies = movies.slice(0, 10);
+  // const top10Movies = movies.slice(0, 10);
 
   return (
     <div className={classes.ListCard}>
@@ -103,10 +86,10 @@ const genreNames = movie.genre_ids.map((genreId) => genreMapping[genreId]);
       </div>
       <div className={classes.Moviecontainer}>
         <div className={classes.movieList}>
-          {top10Movies.map((movie) => (
+          {movies.splice(0, 10).map((movie) => (
             <Card
               key={movie.id}
-              movie={movie}
+              // movie={movie}
               title={movie.title}
               genreIds={movie.genre_ids}
               releaseDate={movie.release_date}
