@@ -1,20 +1,16 @@
-import React, { useState } from 'react';
-import searchIcon from '../Assets/Icon.png';
-import classes from './Search.module.css';
+import React, { useState } from "react";
+import searchIcon from "../Assets/Icon.png";
+import classes from "./Search.module.css";
 
 const SearchInput = ({ onSearch }) => {
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState("");
 
-  // Function to handle input changes
   const handleInputChange = (event) => {
     setQuery(event.target.value);
   };
-
-  // Function to handle search when the search icon is clicked
   const handleSearch = () => {
-    // Implement your search logic here using the 'query' state
     onSearch(query);
-    console.log('Searching for:', query); // Corrected: Log the 'query' state variable
+    console.log("Searching for:", query);
   };
 
   return (
@@ -37,4 +33,3 @@ const SearchInput = ({ onSearch }) => {
 };
 
 export default SearchInput;
-

@@ -2,16 +2,15 @@ import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import classes from "./cardLists.module.css";
 import Arrow from "../Assets/Arrow.png";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const CardLists = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    const apiKey = "8b6e37cfbe4ef31a23e07a928d019469"; // Replace with your actual API key
+    const apiKey = "8b6e37cfbe4ef31a23e07a928d019469";
     const apiUrl = "https://api.themoviedb.org/3/movie/top_rated";
 
-    // Construct the query parameters, including your API key
     const queryParams = new URLSearchParams({
       include_adult: false,
       include_video: false,
@@ -21,10 +20,8 @@ const CardLists = () => {
       api_key: apiKey,
     });
 
-    // Combine the base URL with the query parameters
     const url = `${apiUrl}?${queryParams}`;
 
-    // Make the API request and handle the response
     fetch(url)
       .then((response) => {
         if (!response.ok) {
@@ -33,11 +30,9 @@ const CardLists = () => {
         return response.json();
       })
       .then((data) => {
-        // Update the 'movies' state with the fetched data
         setMovies(data.results);
       })
       .catch((error) => {
-        // Handle any errors that occurred during the fetch
         console.error("Fetch error:", error);
       });
   }, []);

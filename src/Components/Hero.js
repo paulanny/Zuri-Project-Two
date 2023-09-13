@@ -1,8 +1,7 @@
-// import HeroImg from '../Assets/Poster.png';
-import classes from './HeroStyles.module.css';
-import Imdb from '../Assets/imdb.png';
-import Tomatoes from '../Assets/tomato.png';
-import PLayIcon from '../Assets/play.png';
+import classes from "./HeroStyles.module.css";
+import Imdb from "../Assets/imdb.png";
+import Tomatoes from "../Assets/tomato.png";
+import PLayIcon from "../Assets/play.png";
 
 const Hero = () => {
   return (

@@ -1,15 +1,3 @@
-/* .card  {
-  justify-content: center; */
-    /* display: grid; */
-    /* flex-direction: row;
-    align-items: center; */
-    /* width: 25%; */
-/* } */
-
-/* .card  {
-  padding: 10px;
-} */
-
 .imdbim {
   display: flex;
   flex-direction: row;
@@ -35,18 +23,18 @@
 
 .movieReleaseDate {
   font-size: 10px;
-  color:  rgba(156, 163, 175, 1);
+  color: rgba(156, 163, 175, 1);
   margin: 6px 0px 10px 0px;
   font-weight: 700;
 }
 
-.movieTitle {  
+.movieTitle {
   color: (17, 24, 39, 1);
   margin-bottom: 10px;
   font-size: 18px;
-  font-weight: 700;;
+  font-weight: 700;
 }
 
-.moviePoster    {
+.moviePoster {
   width: 280px;
 }

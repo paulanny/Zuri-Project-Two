@@ -1,8 +1,6 @@
-/* SearchInput.css */
-
 .searchContainer {
   position: relative;
-  width: 450px; /* Adjust the width as needed */
+  width: 450px;
   border: 1px solid #ccc;
   border-radius: 5px;
   display: flex;
@@ -15,13 +13,13 @@
   flex-grow: 1;
   padding: 8px;
   background-color: transparent;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   color: white;
   font-size: 14px;
 }
 
 .searchIcon {
   position: absolute;
-  right: 10px; /* Adjust the right offset as needed */
-  cursor: pointer; /* Add a pointer cursor to indicate it's clickable */
+  right: 10px;
+  cursor: pointer;
 }

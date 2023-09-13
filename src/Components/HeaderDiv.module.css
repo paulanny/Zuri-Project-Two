@@ -4,12 +4,11 @@
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  background-color: #0b08b8;
+  background-color: #100f49;
   padding: 30px 40px;
 }
 
 .HeaderDiv {
   display: flex;
   justify-content: space-between;
-  /* padding: 30px 40px; */
 }
