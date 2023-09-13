@@ -1,12 +1,17 @@
+.Moviecontainer   {
+  margin: 0 auto; /* Center horizontally */
+  /* text-align: center;  Optionally center the content horizontally */ 
+  /* padding: 20px;  */
+}
+
 .movieList {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px; 
 }
 
 .ListCard {
-  padding: 30px 70px;
+  padding: 30px 30px;
 }
 
 .seendicon {

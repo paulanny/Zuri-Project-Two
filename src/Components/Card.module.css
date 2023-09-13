@@ -1,3 +1,15 @@
+/* .card  {
+  justify-content: center; */
+    /* display: grid; */
+    /* flex-direction: row;
+    align-items: center; */
+    /* width: 25%; */
+/* } */
+
+/* .card  {
+  padding: 10px;
+} */
+
 .imdbim {
   display: flex;
   flex-direction: row;
@@ -33,4 +45,8 @@
   margin-bottom: 10px;
   font-size: 18px;
   font-weight: 700;;
+}
+
+.moviePoster    {
+  width: 280px;
 }
