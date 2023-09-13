@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import Imdb from '../Assets/imdb.png';
 import Tomatoes from '../Assets/tomato.png';
 import classes from './Card.module.css';
@@ -6,7 +5,6 @@ import classes from './Card.module.css';
 const Card = ({ id, title, genreIds, releaseDate, overview, posterPath }) => {
   return (
     <div className={classes.card} data-testid="movie-card">
-      <Link to={`/movie/${id}`} >
       <img
       className={classes.moviePoster}
         src={`https://image.tmdb.org/t/p/w500${posterPath}`} alt={title}
@@ -33,7 +31,6 @@ const Card = ({ id, title, genreIds, releaseDate, overview, posterPath }) => {
         Genre: {genreIds.join(', ')}
         </p>
       </div>
-      </Link>
     </div>
   );
 };

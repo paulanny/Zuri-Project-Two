@@ -3,8 +3,6 @@ import React, { useState, useEffect } from "react";
 import Header from "../Components/Header";
 import CardLists from "../Components/CardLists";
 import Footer from "../Components/Footer";
-import MovieDeets from "../Components/MovieDeets";
-import AboutMovie from "../Components/AboutMovie";
 // import MovieDetails from "../Pages/MovieDetails";
 
 const Home = () => {
@@ -102,8 +100,8 @@ const Home = () => {
         </div>
       )}
       <Footer />
-      <MovieDeets />
-      <AboutMovie />
+      {/* <MovieDeets />
+      <AboutMovie /> */}
     </div>
   );
 };

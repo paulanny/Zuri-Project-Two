@@ -23,12 +23,6 @@ const AboutMovie = () => {
       <div className={classes.allunderposterattr}>
         <div className={classes.underposterp}>
           <p>Top Gun: Maverick • 2022 • PG-13 • 2h 10m</p>
-          {/* <div className="classes.circle"></div>
-          <p>2022</p>
-          <div className="classes.circle"></div>
-          <p>PG-13</p>
-          <div className="classes.circle"></div>
-          <p>2h10m</p> */}
           <div className={classes.movbtn}>
             <button>Action</button>
             <button>Drama</button>

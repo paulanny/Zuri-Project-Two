@@ -36,17 +36,12 @@ import MovieDetails from "./Pages/MovieDetails";
   return (
   <Routes>
     <Route path="/" element={<Home />} />
-    {/* <Route path="/movie/:id" >
-    {movieDetails && <MovieDetails {...movieDetails} />} 
-    </Route> */}
-    <Route path="/movie/:id">
-        {movieDetails && <MovieDetails {...movieDetails} />} {/* Render Card when movieData is available */}
-      </Route>
+    <Route path="/movie/:id" element={<MovieDetails />} />
   </Routes>
   );
 }
 
 export default App;
 
-// <Route path="/movie/:id" element={<MovieDetails />} 
+
 //     {movieDetails && <MovieDetails {...movieDetails} />} />
