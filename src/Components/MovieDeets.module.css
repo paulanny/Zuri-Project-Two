@@ -42,7 +42,7 @@
 }
 
 .active::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   right: -10px;
@@ -89,8 +89,27 @@
   margin-bottom: 10px;
 }
 
-@media(max-width:1024px) {
+@media (max-width: 1024px) {
   .linksa {
     padding: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .details {
+    width: 150px;
+  }
+  .Logo {
+    width: 120px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+  .linksa {
+    font-size: 12px;
+  }
+
+  .box p:nth-child(1) {
+    font-size: 12px;
   }
 }

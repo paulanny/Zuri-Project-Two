@@ -1,31 +1,40 @@
 .searchdiv {
-    margin: 0 auto;
-    padding: 50px 30px;
-  }
-  
-  .searchResult {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 40px;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+}
 
-  .searchReleaseDate      {
-    font-size: 10px;
+.searchResult {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+}
+
+.searchReleaseDate {
+  font-size: 10px;
   color: rgba(156, 163, 175, 1);
   margin: 6px 0px 10px 0px;
   font-weight: 700;
-  }
+}
 
-  .searchMovieTitle   {
-    color: rgba(17, 24, 39, 1);
+.searchMovieTitle {
+  color: rgba(17, 24, 39, 1);
   margin-bottom: 10px;
   font-size: 22px;
   font-weight: 700;
-  }
-  
+}
 
-  .searchCard   {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+.searchCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  /* text-align: center; */
+}
+
+/* .searchCard img {
+  width: 280px;
+} */

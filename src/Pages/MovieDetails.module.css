@@ -27,8 +27,6 @@
   width: 40px;
 }
 
-
-
 .hndp {
   display: flex;
   flex-direction: column;
@@ -248,68 +246,101 @@
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
 }
 
-@media(max-width:1024px){
+@media (max-width: 1024px) {
   .moredeets {
     width: 100%;
     display: flex;
     flex-direction: column;
+  }
+
+  .btnlikediv {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    width: 100%;
+  }
+
+  .endbtn {
+    padding-left: 0px;
+  }
+
+  .moredeetsp p {
+    font-size: 20px;
+  }
+
+  .firstdiv {
+    width: 40%;
+  }
+
+  .firstdiv p {
+    font-size: 15px;
+  }
+
+  .seconddiv {
+    margin-left: -15px;
+  }
+
+  .seconddiv p {
+    font-size: 15px;
+    padding-left: 15px;
+  }
+
+  .gridpostimg {
+    width: 100% !important;
+    position: relative;
+  }
 }
 
-.btnlikediv {
-  display: flex;
-  flex-direction: row;
-  margin-top: 50px;
-  margin-bottom: 40px;
-  width: 100%;
-}
-
-.endbtn {
-  padding-left: 0px;
-}
-
-.moredeetsp p {
-  font-size: 20px;
-}
-
-.firstdiv{
-  width: 40%;
-}
-
-.firstdiv p {
-  font-size: 15px;
-}
-
-.seconddiv  {
-  margin-left: -15px;
-}
-
-.seconddiv p {
-  font-size: 15px;
-  padding-left: 15px;
-}
-
-.gridpostimg {
-  width: 100% !important;
-  position: relative;
-}
-}
-
-@media(max-width:800px) {
+@media (max-width: 800px) {
   .underposterp {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 15px;
     margin-top: 14px;
-}
-.underposterp p {
-  margin-right: 0px;
-  margin-top: 12px;
-  
+  }
+  .underposterp p {
+    margin-right: 0px;
+    margin-top: 12px;
+  }
+
+  .movbtn {
+    margin-top: 15px;
+    margin-left: 0px;
+  }
 }
 
-.movbtn{
-  margin-top: 15px;
-  margin-left: 0px;
-}
+@media (max-width: 600px) {
+  .moredeetsp p {
+    font-size: 10px;
+  }
+
+  .underposterp {
+    align-items: start;
+  }
+
+  .underposterp p {
+    font-size: 11px;
+  }
+
+  .favp,
+  .favp2 {
+    font-size: 12px;
+  }
+
+  .AboutMovie {
+    padding: 20px 15px 0px 160px;
+    /* width: 1000px; */
+  }
+  .firstdiv p {
+    font-size: 10px;
+  }
+  .seconddiv p {
+    font-size: 10px;
+  }
+
+  .endbtn p {
+    font-size: 10px;
+  }
 }
