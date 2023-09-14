@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import MovieDeets from "../Components/MovieDeets";
 import classes from "./MovieDetails.module.css";
-import PlayIcon from "../Assets/Play (2).png";
 import StarIcon from "../Assets/Star.png";
 import ExpandIcon from "../Assets/Expand Arrow.png";
 import Tickets from "../Assets/Two Tickets.png";
@@ -52,12 +51,6 @@ function MovieDetails() {
             alt={title}
             data-testid="movie-poster"
           />
-          <div className={classes.overlay}>
-            <div className={classes.playelement}>
-              <img src={PlayIcon} alt="iconplay" />
-            </div>
-            <p className={classes.text}>Watch Trailer</p>
-          </div>
         </div>
         <div className={classes.allunderposterattr}>
           <div className={classes.hndp}>
@@ -105,7 +98,7 @@ function MovieDetails() {
               <p>More Watch Options</p>
             </button>
             <div className={classes.gridpost}>
-              <img src={GridPosters} alt="gridposters" />
+              <img className={classes.gridpostimg} src={GridPosters} alt="gridposters" />
               <div className={classes.enddivv}>
                 <img src={Listss} alt="tickets" />
                 <p>The Best Movies and Shows in September</p>

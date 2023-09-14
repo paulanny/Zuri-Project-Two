@@ -88,3 +88,9 @@
   padding: 5px 15px;
   margin-bottom: 10px;
 }
+
+@media(max-width:1024px) {
+  .linksa {
+    padding: 20px;
+  }
+}
