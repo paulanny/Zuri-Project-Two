@@ -293,3 +293,23 @@
   position: relative;
 }
 }
+
+@media(max-width:800px) {
+  .underposterp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-top: 14px;
+}
+.underposterp p {
+  margin-right: 0px;
+  margin-top: 12px;
+  
+}
+
+.movbtn{
+  margin-top: 15px;
+  margin-left: 0px;
+}
+}
