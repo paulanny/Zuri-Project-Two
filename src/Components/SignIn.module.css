@@ -9,3 +9,16 @@
   color: white;
   margin-right: 13px;
 }
+
+@media(max-width:670px) {
+  .SignIn p   {
+    display: none;
+  }
+}
+
+
+@media(max-width:600px) {
+  .SignIn  {
+    display: none;
+  }
+}

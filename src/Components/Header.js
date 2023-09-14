@@ -9,7 +9,7 @@ const Header = ({ onSearch }) => {
   return (
     <div className={classes.HeaderBg}>
       <div className={classes.HeaderDiv}>
-        <img src={LogoImg} alt="LogoImg" />;
+        <img className={classes.HeaderImg} src={LogoImg} alt="LogoImg" />;
         <SearchInput onSearch={onSearch}/>;
         <SignIn />
       </div>

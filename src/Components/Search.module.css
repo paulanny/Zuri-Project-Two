@@ -23,3 +23,31 @@
   right: 10px;
   cursor: pointer;
 }
+
+@media(max-width:790px) {
+  .searchContainer  {
+    width: 350px;
+  }
+}
+
+@media(max-width:600px) {
+  .searchContainer  {
+    width: 250px;
+    padding-left: 20px;
+  }
+}
+
+@media(max-width:500px) {
+  .searchContainer  {
+    width: 200px;
+    padding-left: 20px;
+  }
+}
+
+@media(max-width:380px) {
+  .searchContainer  {
+    width: 100px;
+    padding-left: 20px;
+    overflow: hidden;
+  }
+}

@@ -4,18 +4,19 @@
 
 .movieList {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 40px;
 }
 
 .ListCard {
-  padding: 30px 30px;
+  padding: 50px 30px;
 }
 
 .seendicon {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 
 .featuretxts {
@@ -23,7 +24,11 @@
   display: flex;
   align-items: center;
   flex-direction: row;
-  margin: 30px 0px;
+  margin: 30px 0px 10px 0px;
+}
+
+.featuretxts h2   {
+  font-size: 40px;
 }
 
 .seendicon {
@@ -38,4 +43,58 @@
 
 .seendicon a {
   color: #be123c;
+  font-size: 18px;
+}
+
+.movieList a   {
+  text-decoration: none;
+}
+
+@media(max-width:700px) {
+  .featuretxts h2   {
+    font-size: 25px;
+  }
+
+  .seendicon a {
+    color: #be123c;
+    font-size: 15px;
+  }
+}
+
+@media(max-width:430px) {
+  .featuretxts h2   {
+    font-size: 20px;
+  }
+
+  .seendicon a {
+    color: #be123c;
+    font-size: 13px;
+  }
+
+  .seendicon img {
+    height: 14px;
+    padding-left: 5px;
+  }
+
+  .movieList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 40px;
+  }
+}
+
+@media(max-width:350px) {
+  .featuretxts h2   {
+    font-size: 15px;
+  }
+
+  .seendicon a {
+    color: #be123c;
+    font-size: 10px;
+  }
+
+  .seendicon img {
+    height: 10px;
+    padding-left: 5px;
+  }
 }

@@ -12,3 +12,22 @@
   display: flex;
   justify-content: space-between;
 }
+
+@media(max-width:1000px) {
+  .HeaderImg {
+    height: 40px;
+  }
+}
+
+@media(max-width:500px) {
+  .HeaderBg {
+    padding: 20px 20px;
+  }
+}
+
+@media(max-width:400px) {
+  .HeaderImg {
+    height: 30px;
+  }
+}
+
