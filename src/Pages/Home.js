@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Header from "../Components/Header";
 import CardLists from "../Components/CardLists";
 import Footer from "../Components/Footer";
+import classes from "./searchResults.module.css";
 
 const Home = () => {
   const [searchResults, setSearchResults] = useState([]);
@@ -31,7 +32,7 @@ const Home = () => {
     };
 
     fetchData();
-  }, []);
+  }, [initialMovies]);
 
   const onSearch = async (query) => {
     console.log("Searching for:", query);
@@ -67,17 +68,19 @@ const Home = () => {
       {loading ? (
         <p>Loading...</p>
       ) : (
-        <div>
+        <div className={classes.searchdiv}>
           {showSearchResults ? (
-            <div>
+            <div className={classes.searchResult}>
               {searchResults.map((movie) => (
-                <div key={movie.id}>
-                  <h2>{movie.title}</h2>
+                <div classname={classes.searchCard} key={movie.id}>
                   <img
-                    src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                    src={`https://image.tmdb.org/t/p/w280${movie.poster_path}`}
                     alt={movie.title}
                   />
-                  <p>Release Date: {movie.release_date}</p>
+                  <h2 className={classes.searchMovieTitle}>{movie.title}</h2>
+                  <p className={classes.searchReleaseDate}>
+                    Release Date: {movie.release_date}
+                  </p>
                 </div>
               ))}
             </div>
