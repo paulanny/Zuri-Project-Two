@@ -11,6 +11,7 @@
 .HeaderDiv {
   display: flex;
   justify-content: space-between;
+  padding: 5px 30px;
 }
 
 @media (max-width: 1000px) {
