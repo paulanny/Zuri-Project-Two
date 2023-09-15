@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import Header from "../Components/Header";
-import CardLists from "../Components/CardLists";
-import Footer from "../Components/Footer";
-import { Puff } from "react-loader-spinner";
-import classes from "./searchResults.module.css";
+import React, { useState, useEffect } from 'react';
+import Header from '../Components/Header';
+import CardLists from '../Components/CardLists';
+import Footer from '../Components/Footer';
+import { Puff } from 'react-loader-spinner';
+import classes from './searchResults.module.css';
 
 const Home = () => {
   const [searchResults, setSearchResults] = useState([]);
@@ -14,7 +14,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const apiKey = "8b6e37cfbe4ef31a23e07a928d019469";
+      const apiKey = '8b6e37cfbe4ef31a23e07a928d019469';
       const page = 1;
       const apiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&include_adult=false&language=en-US&page=${page}`;
 
@@ -30,23 +30,23 @@ const Home = () => {
         console.log(initialMovies);
         setLoading(false);
       } catch (error) {
-        console.error("Error fetching initial movie list:", error);
+        console.error('Error fetching initial movie list:', error);
       }
     };
 
     fetchData();
-  }, [initialMovies]);
+  }, []);
 
   const onSearch = async (query) => {
     if (!query) {
       setSearchResults([]);
       setShowSearchResults(false);
-      setError("You did not enter any value");
+      setError('You did not enter any value');
       return;
     }
-    console.log("Searching for:", query);
+    console.log('Searching for:', query);
     setLoading(true);
-    const apiKey = "8b6e37cfbe4ef31a23e07a928d019469";
+    const apiKey = '8b6e37cfbe4ef31a23e07a928d019469';
     const page = 1;
 
     const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}&page=${page}`;
@@ -60,9 +60,9 @@ const Home = () => {
 
       const data = await response.json();
 
-      console.log("Movie search results:", data.results);
+      console.log('Movie search results:', data.results);
       if (data.results.length === 0) {
-        setError("No movies found");
+        setError('No movies found');
       } else {
         setError(null);
       }
@@ -70,8 +70,8 @@ const Home = () => {
       setSearchResults(data.results);
       setShowSearchResults(true);
     } catch (error) {
-      console.error("Error fetching search results:", error);
-      setError("An Error occured while fetching results");
+      console.error('Error fetching search results:', error);
+      setError('An Error occured while fetching results');
     } finally {
     }
   };
