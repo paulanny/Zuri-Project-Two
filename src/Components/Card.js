@@ -18,7 +18,7 @@ const Card = ({ id, title, genreIds, releaseDate, overview, posterPath, genres }
           className={classes.movieReleaseDate}
           data-testid="movie-release-date"
         >
-          Release Date: {releaseDate}
+          {releaseDate}
         </p>
         <h2 className={classes.movieTitle} data-testid="movie-title">
           {title}
