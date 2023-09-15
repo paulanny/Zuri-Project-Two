@@ -31,17 +31,16 @@
   flex-direction: column;
   justify-content: center;
   padding: 10px;
-  
 }
 
 .loadingContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; 
+  height: 100vh;
 }
 
-.loadingstate  {
+.loadingstate {
   font-size: 24px;
   color: rgba(190, 18, 60, 1);
   background-color: #fff;
@@ -58,9 +57,73 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   text-align: center;
-  width:30%;
+  width: 30%;
   margin: auto;
   position: absolute;
   top: 80px;
   right: 350px;
+}
+
+@media (max-width: 900px) {
+  .errorMessage {
+    font-size: 18px;
+    margin: auto;
+    padding: 10px;
+    position: absolute;
+    right: 185px;
+    text-align: center;
+    top: 70px;
+    width: 40%;
+  }
+}
+
+@media (max-width: 600px) {
+  .errorMessage {
+    font-size: 12px;
+    margin: auto;
+    padding: 6px;
+    position: absolute;
+    right: 83px;
+    text-align: center;
+    top: 70px;
+    width: 40%;
+  }
+}
+
+@media (max-width: 450px) {
+  .errorMessage {
+    font-size: 12px;
+    margin: auto;
+    padding: 6px;
+    position: absolute;
+    right: 53px;
+    text-align: center;
+    top: 59px;
+    width: 40%;
+  }
+}
+@media (max-width: 415px) {
+  .errorMessage {
+    font-size: 12px;
+    margin: auto;
+    padding: 8px;
+    position: absolute;
+    right: 37px;
+    text-align: center;
+    top: 60px;
+    width: 45%;
+  }
+}
+
+@media (max-width: 390px) {
+  .errorMessage {
+    font-size: 10px;
+    margin: auto;
+    padding: 8px;
+    position: absolute;
+    right: 27px;
+    text-align: center;
+    top: 60px;
+    width: 55%;
+  }
 }
