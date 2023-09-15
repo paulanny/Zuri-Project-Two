@@ -41,7 +41,6 @@ const Home = () => {
     if (!query) {
       setSearchResults([]);
       setShowSearchResults(false);
-      // setLoading(false);
       setError("You did not enter any value");
       return;
     }
@@ -74,7 +73,6 @@ const Home = () => {
       console.error("Error fetching search results:", error);
       setError("An Error occured while fetching results");
     } finally {
-      // setLoading(false);
     }
   };
 

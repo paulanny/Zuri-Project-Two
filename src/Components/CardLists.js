@@ -23,13 +23,11 @@ const CardLists = () => {
         api_key: apiKey,
       });
 
-      // Fetch movies data
       const moviesUrl = `${moviesApiUrl}?${queryParams}`;
       const moviesResponse = await fetch(moviesUrl);
       const moviesData = await moviesResponse.json();
       setMovies(moviesData.results);
 
-      // Fetch genre data
       const genresQueryParams = new URLSearchParams({
         api_key: apiKey,
         language: "en-US",
@@ -39,7 +37,6 @@ const CardLists = () => {
       const genresResponse = await fetch(genresUrl);
       const genresData = await genresResponse.json();
 
-      // Create a genre map with genre IDs as keys and genre names as values
       const genreMap = {};
       genresData.genres.forEach((genre) => {
         genreMap[genre.id] = genre.name;

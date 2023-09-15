@@ -37,7 +37,7 @@ const Card = ({ id, title, genreIds, releaseDate, overview, posterPath, genres }
           className={classes.movieReleaseDate}
           data-testid="movie-release-date"
         >
-         Genre: {genreNames.join(', ')}
+          {genreNames.join(', ')}
         </p>
       </div>
     </div>

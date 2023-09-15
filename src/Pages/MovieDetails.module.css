@@ -23,7 +23,6 @@
   align-items: center;
   flex: 1;
   padding: 20px 27px 0px 270px;
-  /* width: 1000px; */
 }
 
 .Imgcontainer {
@@ -56,15 +55,11 @@
 .underposterp p {
   color: rgba(64, 64, 64, 1);
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 600;
   margin-right: 20px;
 }
 
 .allunderposterattr {
-  /* display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between; */
   margin: 30px 0;
   width: 100%;
 }
@@ -97,23 +92,19 @@
   margin-bottom: 30px;
 }
 
-.favourite img {
+.starIcon {
   height: 20px;
   margin-right: 6px;
   cursor: pointer;
-}
-
-.starIcon path {
-  fill: #ccc; /* Change to the default color you want */
-  transition: fill 0.3s ease; /* Add a smooth color transition effect */
+  fill: #ccc;
+  transition: fill 0.3s ease;
 }
 
 .starClicked {
+  fill: rgb(242, 191, 50);
+  height: 20px;
+  margin-right: 6px;
   cursor: pointer;
-}
-
-.starClicked path {
-  fill: #f00; /* Change to the color you want when clicked */
 }
 
 .favp {
@@ -275,6 +266,14 @@
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
 }
 
+.circle {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: rgba(64, 64, 64, 1);
+  margin-right: 20px;
+}
+
 @media (max-width: 1024px) {
   .moredeets {
     width: 100%;
@@ -322,18 +321,6 @@
 }
 
 @media (max-width: 800px) {
-  .underposterp {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    margin-bottom: 15px;
-    margin-top: 14px;
-  }
-  .underposterp p {
-    margin-right: 0px;
-    margin-top: 12px;
-  }
-
   .movbtn {
     margin-top: 15px;
     margin-left: 0px;
@@ -343,10 +330,6 @@
 @media (max-width: 600px) {
   .moredeetsp p {
     font-size: 10px;
-  }
-
-  .underposterp {
-    align-items: start;
   }
 
   .underposterp p {
@@ -360,7 +343,6 @@
 
   .AboutMovie {
     padding: 20px 15px 0px 160px;
-    /* width: 1000px; */
   }
   .firstdiv p {
     font-size: 10px;
@@ -371,5 +353,24 @@
 
   .endbtn p {
     font-size: 10px;
+  }
+}
+
+@media (max-width: 410px) {
+  .circle {
+    display: none;
+  }
+
+  .underposterp {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 30px;
+    margin-top: 14px;
+  }
+
+  .underposterp p {
+    font-size: 11px;
+    margin-bottom: 12px;
   }
 }
