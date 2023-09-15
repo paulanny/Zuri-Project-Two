@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import MovieDeets from "../Components/MovieDeets";
-import classes from "./MovieDetails.module.css";
-import Tickets from "../Assets/Two Tickets.png";
-import Lists from "../Assets/List.png";
-import Listss from "../Assets/List (2).png";
-import GridPosters from "../Assets/Rectangle 37.png";
-import IconStar from "../Components/IconStar";
-import { Puff } from "react-loader-spinner";
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import MovieDeets from '../Components/MovieDeets';
+import classes from './MovieDetails.module.css';
+import Tickets from '../Assets/Two Tickets.png';
+import Lists from '../Assets/List.png';
+import Listss from '../Assets/List (2).png';
+import GridPosters from '../Assets/Rectangle 37.png';
+import IconStar from '../Components/IconStar';
+import { Puff } from 'react-loader-spinner';
 
 function MovieDetails() {
   const { id } = useParams();
@@ -17,19 +17,19 @@ function MovieDetails() {
   useEffect(() => {
     async function fetchMovieDetails() {
       try {
-        const apiKey = "8b6e37cfbe4ef31a23e07a928d019469";
+        const apiKey = '8b6e37cfbe4ef31a23e07a928d019469';
         const response = await fetch(
           `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US`
         );
 
         if (!response.ok) {
-          throw new Error("Failed to fetch movie details");
+          throw new Error('Failed to fetch movie details');
         }
 
         const data = await response.json();
         setMovieDetails(data);
       } catch (error) {
-        console.error("Error fetching movie details:", error);
+        console.error('Error fetching movie details:', error);
       }
     }
 
@@ -71,7 +71,9 @@ function MovieDetails() {
             <h1 data-testid="movie-title">{title}</h1>
             <div className={classes.pandfav}>
               <div className={classes.underposterp}>
-                <p data-testid="movie-release-date">{release_date}</p>
+                <p data-testid="movie-release-date">
+                  {release_date ? new Date(release_date).toUTCString() : ''}
+                </p>
                 <div className={classes.circle}></div>
                 <p data-testid="movie-runtime">{runtime} </p>
                 {/* <div className={classes.movbtn}>

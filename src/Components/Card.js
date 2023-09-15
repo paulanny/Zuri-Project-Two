@@ -1,8 +1,16 @@
-import Imdb from "../Assets/imdb.png";
-import Tomatoes from "../Assets/tomato.png";
-import classes from "./Card.module.css";
+import Imdb from '../Assets/imdb.png';
+import Tomatoes from '../Assets/tomato.png';
+import classes from './Card.module.css';
 
-const Card = ({ id, title, genreIds, releaseDate, overview, posterPath, genres }) => {
+const Card = ({
+  id,
+  title,
+  genreIds,
+  releaseDate,
+  overview,
+  posterPath,
+  genres,
+}) => {
   const genreNames = genreIds.map((genreId) => genres[genreId]);
 
   return (
