@@ -32,9 +32,36 @@
   flex-direction: column;
   justify-content: center;
   padding: 10px;
-  /* text-align: center; */
+  
 }
 
-/* .searchCard img {
-  width: 280px;
-} */
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
+
+.loadingstate  {
+  font-size: 24px;
+  color: rgba(190, 18, 60, 1);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.errorMessage {
+  font-size: 18px;
+  color: rgba(190, 18, 60, 1);
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width:30%;
+  margin: auto;
+  position: absolute;
+  top: 80px;
+  right: 350px;
+}

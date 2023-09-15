@@ -2,7 +2,9 @@ import Imdb from "../Assets/imdb.png";
 import Tomatoes from "../Assets/tomato.png";
 import classes from "./Card.module.css";
 
-const Card = ({ id, title, genreIds, releaseDate, overview, posterPath }) => {
+const Card = ({ id, title, genreIds, releaseDate, overview, posterPath, genres }) => {
+  const genreNames = genreIds.map((genreId) => genres[genreId]);
+
   return (
     <div className={classes.card} data-testid="movie-card">
       <img
@@ -35,7 +37,7 @@ const Card = ({ id, title, genreIds, releaseDate, overview, posterPath }) => {
           className={classes.movieReleaseDate}
           data-testid="movie-release-date"
         >
-          Genre: {genreIds.join(", ")}
+         Genre: {genreNames.join(', ')}
         </p>
       </div>
     </div>

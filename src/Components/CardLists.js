@@ -6,35 +6,48 @@ import { Link } from "react-router-dom";
 
 const CardLists = () => {
   const [movies, setMovies] = useState([]);
+  const [genres, setGenres] = useState({});
 
   useEffect(() => {
-    const apiKey = "8b6e37cfbe4ef31a23e07a928d019469";
-    const apiUrl = "https://api.themoviedb.org/3/movie/top_rated";
+    const fetchMoviesAndGenres = async () => {
+      const apiKey = "8b6e37cfbe4ef31a23e07a928d019469";
+      const moviesApiUrl = "https://api.themoviedb.org/3/movie/top_rated";
+      const genresApiUrl = "https://api.themoviedb.org/3/genre/movie/list";
 
-    const queryParams = new URLSearchParams({
-      include_adult: false,
-      include_video: false,
-      language: "en-US",
-      page: 1,
-      sort_by: "popularity.desc",
-      api_key: apiKey,
-    });
-
-    const url = `${apiUrl}?${queryParams}`;
-
-    fetch(url)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setMovies(data.results);
-      })
-      .catch((error) => {
-        console.error("Fetch error:", error);
+      const queryParams = new URLSearchParams({
+        include_adult: false,
+        include_video: false,
+        language: "en-US",
+        page: 1,
+        sort_by: "popularity.desc",
+        api_key: apiKey,
       });
+
+      // Fetch movies data
+      const moviesUrl = `${moviesApiUrl}?${queryParams}`;
+      const moviesResponse = await fetch(moviesUrl);
+      const moviesData = await moviesResponse.json();
+      setMovies(moviesData.results);
+
+      // Fetch genre data
+      const genresQueryParams = new URLSearchParams({
+        api_key: apiKey,
+        language: "en-US",
+      });
+
+      const genresUrl = `${genresApiUrl}?${genresQueryParams}`;
+      const genresResponse = await fetch(genresUrl);
+      const genresData = await genresResponse.json();
+
+      // Create a genre map with genre IDs as keys and genre names as values
+      const genreMap = {};
+      genresData.genres.forEach((genre) => {
+        genreMap[genre.id] = genre.name;
+      });
+      setGenres(genreMap);
+    };
+
+    fetchMoviesAndGenres();
   }, []);
 
   if (movies.length === 0) {
@@ -60,6 +73,7 @@ const CardLists = () => {
                 releaseDate={movie.release_date}
                 overview={movie.overview}
                 posterPath={movie.poster_path}
+                genres={genres}
               />
             </Link>
           ))}

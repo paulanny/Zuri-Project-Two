@@ -3,15 +3,16 @@ import { useParams } from "react-router-dom";
 import MovieDeets from "../Components/MovieDeets";
 import classes from "./MovieDetails.module.css";
 import StarIcon from "../Assets/Star.png";
-import ExpandIcon from "../Assets/Expand Arrow.png";
 import Tickets from "../Assets/Two Tickets.png";
 import Lists from "../Assets/List.png";
 import Listss from "../Assets/List (2).png";
 import GridPosters from "../Assets/Rectangle 37.png";
+import { Puff } from "react-loader-spinner";
 
 function MovieDetails() {
   const { id } = useParams();
   const [movieDetails, setMovieDetails] = useState(null);
+  const [starClicked, setStarClicked] = useState(false);
 
   useEffect(() => {
     async function fetchMovieDetails() {
@@ -36,7 +37,20 @@ function MovieDetails() {
   }, [id]);
 
   if (!movieDetails) {
-    return <div>Loading...</div>;
+    return (
+      <div className={classes.loadingContainer}>
+        <Puff
+          height="80"
+          width="80"
+          radius={1}
+          color="rgba(185, 28, 28, 1)"
+          ariaLabel="puff-loading"
+          wrapperStyle={{}}
+          wrapperClass=""
+          visible={true}
+        />
+      </div>
+    );
   }
 
   const { title, release_date, runtime, overview, poster_path } = movieDetails;
@@ -55,21 +69,30 @@ function MovieDetails() {
         <div className={classes.allunderposterattr}>
           <div className={classes.hndp}>
             <h1 data-testid="movie-title">{title}</h1>
-            <div className={classes.underposterp}>
-              <p data-testid="movie-release-date">
-                Release Date (UTC): {release_date}
-              </p>
-              <p data-testid="movie-runtime">Runtime (minutes): {runtime}</p>
-              <div className={classes.movbtn}>
+            <div className={classes.pandfav}>
+              <div className={classes.underposterp}>
+                <p data-testid="movie-release-date">
+                  Release Date (UTC): {release_date}
+                </p>
+                <p data-testid="movie-runtime">Runtime (minutes): {runtime}</p>
+                {/* <div className={classes.movbtn}>
                 <button>Action</button>
                 <button>Drama</button>
+              </div> */}
+              </div>
+              <div className={classes.favourite}>
+                <img
+                  src={StarIcon}
+                  alt="staricon"
+                  className={
+                    starClicked ? classes.starClicked : classes.starIcon
+                  }
+                  onClick={() => setStarClicked(!starClicked)}
+                />
+                <p className={classes.favp}>8.5</p>
+                <p className={classes.favp2}>|350k</p>
               </div>
             </div>
-          </div>
-          <div className={classes.favourite}>
-            <img src={StarIcon} alt="staricon" />
-            <p className={classes.favp}>8.5</p>
-            <p className={classes.favp2}>|350k</p>
           </div>
         </div>
 
@@ -84,7 +107,6 @@ function MovieDetails() {
               </div>
               <div className={classes.seconddiv}>
                 <p>Awards 9 Nominations</p>
-                <img src={ExpandIcon} alt="expicon" />
               </div>
             </div>
           </div>
@@ -98,7 +120,11 @@ function MovieDetails() {
               <p>More Watch Options</p>
             </button>
             <div className={classes.gridpost}>
-              <img className={classes.gridpostimg} src={GridPosters} alt="gridposters" />
+              <img
+                className={classes.gridpostimg}
+                src={GridPosters}
+                alt="gridposters"
+              />
               <div className={classes.enddivv}>
                 <img src={Listss} alt="tickets" />
                 <p>The Best Movies and Shows in September</p>
