@@ -1,6 +1,4 @@
 .card   {
-  /* max-width: 250px;
-    align-items: center; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,7 +40,3 @@
   font-size: 22px;
   font-weight: 700;
 }
-
-/* .moviePoster {
-  width: 280px;
-} */

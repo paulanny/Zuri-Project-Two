@@ -53,6 +53,21 @@
   text-decoration: none;
 }
 
+@media (max-width:750px) {
+  .Moviecontainer {
+    margin: 0 auto;
+    padding: 20px 15px;
+  }
+
+  .featuretxts  {
+    padding: 5px 15px;
+  }
+
+  .ListCard {
+    padding: 20px 30px;
+  }
+}
+
 @media (max-width: 700px) {
   .featuretxts h2 {
     font-size: 25px;

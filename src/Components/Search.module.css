@@ -34,20 +34,22 @@
   .searchContainer {
     width: 250px;
     padding-left: 20px;
+    overflow: hidden;
   }
 }
 
 @media (max-width: 500px) {
   .searchContainer {
-    width: 200px;
-    padding-left: 20px;
+    width: 165px;
+    padding-left: 10px;
+    overflow: hidden;
   }
 }
 
 @media (max-width: 380px) {
   .searchContainer {
     width: 216px;
-    padding-left: 20px;
+    padding-left: 10px;
     overflow: hidden;
   }
 }

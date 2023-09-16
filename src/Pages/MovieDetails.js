@@ -76,10 +76,6 @@ function MovieDetails() {
                 </p>
                 <div className={classes.circle}></div>
                 <p data-testid="movie-runtime">{runtime} </p>
-                {/* <div className={classes.movbtn}>
-                <button>Action</button>
-                <button>Drama</button>
-              </div> */}
               </div>
               <div className={classes.favourite}>
                 <IconStar
